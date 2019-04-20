@@ -1,0 +1,1 @@
+export const FIRST_EXAMPLE = 'FIRST_EXAMPLE';
