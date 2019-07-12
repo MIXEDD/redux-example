@@ -5,8 +5,30 @@ import {connect} from 'react-redux';
 
 class Example extends Component{
 
+    state = {
+        someState: 'string',
+    };
+
+    promiseExample = time => new Promise((resolve,reject) => {
+         setTimeout(() => {resolve('success')}, time);
+    });
+
+    promiseExample2 = _ => {
+        return new Promise((resolve) => {resolve('promiseExample2')});
+    };
+
+    promiseExample3 = _ => {
+        return new Promise((resolve) => {resolve('prmiseExample3')});
+    };
+
+
     componentDidMount() {
-        this.props.firstExample('Maksimilian');
+        this.promiseExample2().then((onResolve) => {
+            console.log(onResolve);
+            return this.promiseExample3();
+        }).then((onResolve) => {
+            console.log(onResolve);
+        });
     }
 
     render() {
