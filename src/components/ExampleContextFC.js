@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import Context from '../context/context';
+import Rainbow from '../hoc/rainbow';
 
 const ExampleContextFC = props => {
 
@@ -27,4 +28,4 @@ const ExampleContextFC = props => {
         );
 }
 
-export default ExampleContextFC;
+export default Rainbow(ExampleContextFC);
