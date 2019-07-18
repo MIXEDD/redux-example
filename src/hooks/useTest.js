@@ -5,7 +5,8 @@ function useTest(variable, dependencies) {
 
    useEffect(() => {
         setTest(variable);
-   }, []);
+        console.log('useTest');
+   }, dependencies);
    
    return test;
 }

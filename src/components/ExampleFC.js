@@ -7,7 +7,7 @@ import useTest from '../hooks/useTest';
 function ExampleFC(props) {
 
     const [someState, setSomeState] = useState('string');
-    const test = useTest('newly updated', []);
+    const test = useTest('newly updated');
     
     const promiseExample = time => new Promise((resolve,reject) => {
          setTimeout(() => {resolve('success')}, time);
