@@ -5,6 +5,7 @@ import './App.css';
 import ExampleContext from './components/ExampleContext';
 import GlobalStateFC from './context/GlobalStateFC'; 
 import ExampleContextFC from './components/ExampleContextFC';
+import Form from './components/Form/Form';
 
 // class App extends Component {
 
@@ -21,11 +22,18 @@ import ExampleContextFC from './components/ExampleContextFC';
 // }
 
 const App = props => {
+
+  const submit = (values) => {
+    console.log(values);
+  };
+
   return (
       <div className="App">
-        <GlobalStateFC>
+        {/* <GlobalStateFC>
           <ExampleContextFC/>
-        </GlobalStateFC>
+        </GlobalStateFC> */}
+
+        <Form/>
       
       </div>
   );
